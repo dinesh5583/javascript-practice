@@ -4,7 +4,7 @@ function addFun(){
     document.querySelector('body').classList.toggle('bg-color')
     let num1=document.querySelector('.num1').value;
     let num2=document.querySelector('.num2').value;
-    alert(+num1 + +num2)
+    alert(+num1 + +num2) 
 }
 // let obj={
 //     birthYear:1997,
@@ -52,3 +52,70 @@ console.log(arrName);
 // console.log(arrName.shift());
 // console.log(arrName.indexOf('rahul'));
 // console.log(arrName.includes('dinsesh'))
+// Hoisting
+// console.log(s==window.s);
+// var s=10
+// const d=10;
+/* ------------------THIS KEYWORD ------------------- */
+const jonas = {
+    name:'dinesh',
+    dob:1997,
+    calAge:function(){
+        self=this;
+        // console.log(this);
+        console.log(2023-this.dob);
+        const insideFunc=function(){
+            // console.log(this);
+            console.log(self);
+        }
+        insideFunc()
+    }
+}
+// jonas.calAge()
+const sumNo=function(a,b){
+    console.log(arguments);
+}
+// sumNo(2,3)
+/* ------------------Objects ------------------- */
+const me={
+    name:'dinesh',
+    age:10
+}
+// const you=me;
+// you.age=20
+// console.log('You object===========',you,'Me object===========',me);
+
+const you=Object.assign({},me)
+you.age=20
+// console.log('You object===========',you,'Me object===========',me);
+
+/* ------------------Destructuring arrays ------------------- */
+const arr=[1,2,3,4]
+// const [first,second,...third]=arr;
+const [first,,third]=arr;
+// console.log(first,second,third);
+// console.log(first,third);
+/* ------------------Destructuring arrays--Swap two variables ------------------- */
+let a=10,b=6;
+[b,a]=[a,b];
+// console.log(a,b);
+let arr1=[1,2,[3,4]]
+const [a1,,[b1,b2]]=arr1
+// console.log(a1,b1,b2);
+
+//Set Default values
+const [p=1,q=1,r=1,s=1]=arr1;
+// console.log(p,q,r,s);
+
+let obj={
+    name1:'dinesh',
+    dob:1997
+}
+const {name1,dob}=obj;
+// console.log(name1,dob);
+
+//--------------------Spread Opertor-------------
+// const str='dinesh'
+// const abcArr=[...str,'m']
+// console.log(abcArr);
+
