@@ -15,7 +15,7 @@ function addFun(){
 // console.log(obj['dob'](2006));
 document.querySelector('body').style.backgroundColor='red';
 
-console.log(Math.trunc(Math.random()*2)+1);
+// console.log(Math.trunc(Math.random()*2)+1);
 class abc{
      name;
      dob;
@@ -24,13 +24,13 @@ class abc{
         this.dob=dob
     }
 }
-console.log(new abc('dinesh','dob'));
-console.log(typeof null);
-console.log(typeof NaN);
+// console.log(new abc('dinesh','dob'));
+// console.log(typeof null);
+// console.log(typeof NaN);
 // Type Coercion
-console.log('23' + '10'+3);
-console.log('23'-'10'-3);
-console.log(Boolean({}));
+// console.log('23' + '10'+3);
+// console.log('23'-'10'-3);
+// console.log(Boolean({}));
 
 //Switch Case Statement
 let number=1
@@ -47,7 +47,7 @@ switch(number){
 let arrName=['dinesh', 'rahul']
 // console.log(arrName.push('mark'));
 arrName.unshift('mark')
-console.log(arrName);
+// console.log(arrName);
 // console.log(arrName.pop());
 // console.log(arrName.shift());
 // console.log(arrName.indexOf('rahul'));
@@ -63,17 +63,17 @@ const jonas = {
     calAge:function(){
         self=this;
         // console.log(this);
-        console.log(2023-this.dob);
+        // console.log(2023-this.dob);
         const insideFunc=function(){
             // console.log(this);
-            console.log(self);
+            // console.log(self);
         }
         insideFunc()
     }
 }
 // jonas.calAge()
 const sumNo=function(a,b){
-    console.log(arguments);
+    // console.log(arguments);
 }
 // sumNo(2,3)
 /* ------------------Objects ------------------- */
@@ -104,7 +104,7 @@ const [a1,,[b1,b2]]=arr1
 // console.log(a1,b1,b2);
 
 //Set Default values
-const [p=1,q=1,r=1,s=1]=arr1;
+// const [p=1,q=1,r=1,s=1]=arr1;
 // console.log(p,q,r,s);
 
 let obj={
@@ -118,4 +118,92 @@ const {name1,dob}=obj;
 // const str='dinesh'
 // const abcArr=[...str,'m']
 // console.log(abcArr);
+
+// const arrTest=[prompt('hello'),prompt('hello2 '),prompt('hello 3')];
+// console.log(arrTest);
+// function abcT(a,b,c){
+//     console.log(a,b,c);
+// }
+// const arrTest=['a','b','c']
+// abcT(...arrTest)
+
+// let names={
+//     name:'dinesh',
+//     dob:1997
+// }
+// let educ={subject:'MCA',...names}
+// console.log(educ);
+
+//===============Rest operator=================
+// const arrTest=['a','b','c','d','e','f','g']
+// const [p,,q,...others]=arrTest;
+// console.log(p,q,others);
+// function add(...test){
+//     console.log(test);
+// }
+// add(...arrTest)
+// add('a','b','c','d','e','f','g');
+// add()
+
+//================For Of loop============
+const arrTest=['a','b','c','d','e','f','g']
+console.log([...arrTest.entries()]);
+// for(let item of arrTest.entries()){
+//     console.log(item);
+// }
+// let objLit1={
+//     op:'mehra',
+//     hp:'YES'
+// }
+// let objLit2={
+//     name:'test',
+//     test:'No',
+//     ...objLit1
+
+// }
+// let es6Enchance={
+//     op:'mehra',
+//     hp:'YES',
+//     callFun(){
+//         console.log('hello');
+//         return 1
+//     }
+// }
+// console.log(es6Enchance.callFun());
+// let es6Enchance={
+//     op:'mehra',
+//     hp:'YES',
+//     [2+2]:{
+//         abc:'123'
+//     }
+// }
+// console.log(es6Enchance.sjk());
+
+//================Looping Objects===============
+let es6Enchance={
+    op:'mehra',
+    hp:'YES',
+    [2+2]:{
+        abc:'123'
+    }
+}
+// for(let data of Object.values(es6Enchance)) console.log(data);
+// for(let data of Object.keys(es6Enchance)) console.log(data);
+// console.log(Object.keys(es6Enchance));
+// console.log(Object.entries(es6Enchance));
+// for(let  [keys,value] of  Object.entries(es6Enchance)) {
+//     console.log(keys,value);
+// }
+//==================MAPS AND SETS=======================
+// const orderSets= new Set(['a','a','a','b','b','c','d'])
+// console.log(orderSets);
+// console.log(orderSets.delete('a'));
+// let newArray=[...orderSets]
+// console.log(newArray);
+// for (const iterator of orderSets) {
+//     console.log(iterator);
+// }
+
+
+
 
