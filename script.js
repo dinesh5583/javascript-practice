@@ -204,6 +204,31 @@ let es6Enchance={
 //     console.log(iterator);
 // }
 
+const setNew=new Map()
+setNew.set('name','dinesh')
+setNew.set(1,'MCA')
+// console.log(setNew);
+// console.log(setNew.get(true));
+const archeck=[5] 
+setNew.set(true,false).set(0.12,'decimal').set(archeck,'array')
+console.log(setNew);
+// let objTest={
+//     'abc':{
+//         name:'dinesh',
+//         subject:'MCA'
+//     },
+//     job:'software'
+// }
+// console.log(Object.values(objTest));
+// console.log(new Map(Object.entries(objTest)));
+// console.log(new Map(objTest));
+// for (const iterator of setNew) {
+//     console.log(iterator);
+// }
+// console.log([...setNew]);
+// console.log(setNew.entries());
+// console.log(setNew.keys());
+// console.log(setNew.values());
 
-
+//=================Working with strings======
 
