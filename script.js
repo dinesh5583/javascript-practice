@@ -231,4 +231,23 @@ console.log(setNew);
 // console.log(setNew.values());
 
 //=================Working with strings======
+// let userName='dinesh singh mehra'
+// console.log('dinesh'.indexOf('n'));
+// console.log(userName.lastIndexOf('h'));
+// console.log(userName.indexOf('SIngh'));
+// console.log(userName.slice(7,12));
+// console.log(userName.split(7,12));
+// console.log(new String(userName));
+// console.log(userName.startsWith('Din'),userName.endsWith('hra'));
+// console.log(userName.includes('ngh'));
+// for (const n of userName.split(' ')) {
+//     console.log(n[0].toUpperCase()+n.slice(1));
+// }
+let userName='dinesh'
+console.log(userName.padStart(10,'0'));
 
+//Repeat method
+
+
+console.log(userName.repeat(3));
+console.log(typeof undefined);
