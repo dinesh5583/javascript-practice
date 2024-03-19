@@ -163,15 +163,115 @@ let obj2={
 // console.log(0 && false  && '' && null && undefined && 'Dinesg ');
 
 
-let res1={
-  guest:0,
-  name:'dinesh'
-}
-let res2={
-  guest:10,
-  name:'Mohit'
-}
+// let res1={
+//   guest:0,
+//   name:'dinesh'
+// }
+// let res2={
+//   guest:10,
+//   name:'Rahul'
+// }
 // res1.guest=res1.guest ?? 90;
 // res1.guest ??= 90;
-
 // console.log(res1);
+// res2.name=res2.name && 'ANONYMOUS';
+// res2.name &&= 'ANONYMOUS'
+// console.log(res2);
+//==============FOR OF LOOOP==========
+// let arrNew=['A','B','C','D','E'];
+// console.log([...arrNew.entries()]);
+// for (const [index,iterator] of arrNew.entries()) {
+//     console.log(index,iterator);
+// }
+// let abc={
+//   name:'Dinesh',
+//   class:'MCA'
+// }
+// let def={
+//   abc,
+//   order:function(){
+//     return 'hello'
+//   },
+//   order2(){
+//     return 'World'
+//   }
+// }
+// console.log(def.order(),def.order2());
+// const weekdays=['Mon','Tue','Wed','Thur','Fri','Sat']
+// let objTest={
+//   [weekdays[2]]:{
+//     test:'1'
+//   },
+//   [`${2+3}`]:{
+//     test:'2'
+//   }
+// }
+// console.log(objTest);
+//=============OPTIONAL CHAINING==========
+// let abc={
+//   name:'dinesh',
+//   class:10
+// }
+// console.log(abc.id?.test?.math);
+// let arrNew=[
+//   {
+//     name:'dinesh',
+//     class:10
+//   },
+//   {
+//     name:'Mohit',
+//     class:12
+//   }
+// ]
+// console.log(arrNew?.[0]?.test?.class);
+//===========LOOPING OBJECTS=======
+// let testNew={
+//   name:'Dinesh',
+//   id:10
+// }
+// console.log(Object.entries(testNew));
+// for (const [index,iterator] of Object.entries(testNew)) {
+//   console.log(index,iterator);
+// }
+//===========SETS AND MAPS==============
+// const arrTest=[1,2,3,4,2,3,4,4,5,6,7]
+// const newArr=new Set(arrTest)
+// console.log(newArr.has(22));
+// console.log(newArr.add(23));
+// console.log(newArr.delete(23));
+// console.log(newArr.clear());
+// console.log(newArr);
+// for (const iterator of newArr) {
+//     console.log(iterator);
+// }
+// console.log([...newArr]);
+// const strCheck='dineshdininshsh';
+// console.log(new Set(strCheck).size);
+
+// let mapData=new Map()
+// let arrNew=[1,2]
+// mapData.set('name','dinesh').set(1,2).set(true,1234).set(arrNew,'hello')
+// console.log(mapData.has([1,2]));
+// mapData.delete('name')
+// console.log(mapData.size);
+// console.log(mapData.keys())
+// console.log(mapData.get(arrNew))
+
+// let newData=new Map([
+//   [1,'dinesh'],[2,'Rahul'],[true,'yes']
+// ])
+// for (const data of newData.values()) {
+//     console.log(data);
+// }
+
+// let objMap={
+//   part1:{name:'Dinesh',study:"MCA"},
+//   part2:"Mehra",
+//   part3:"12334"
+// }
+// console.log(Object.entries(objMap));
+// let newObjMap=new Map(
+//   Object.entries(objMap)
+// )
+// console.log([...newObjMap]);
+// console.log(newObjMap.entries());
