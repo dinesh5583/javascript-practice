@@ -1,6 +1,6 @@
 'use strict'
 //////////////////////ARRAY//////////////////
-const arr=['dinesh','rahul']
+// const arr=['dinesh','rahul']
 // console.log(arr.push('kishan'));
 // console.log(arr.unshift('apple'));
 // console.log(arr);
@@ -8,27 +8,27 @@ const arr=['dinesh','rahul']
 // console.log(arr);
 // console.log(arr.indexOf('dfdf'));
 ////////////////////OBJECTS/////////////
-let obj={
-    'name':function(name){
-        this.age=39
-        return `${name} is here`
-    }
-}
-console.log(obj['name']('dinesh')); 
-console.log(obj.age);
-console.log(Math.trunc(Math.random()*6)+1);
-console.log(arr.concat(['name',1,{name:'dinesh'}]));
+// let obj={
+//     'name':function(name){
+//         this.age=39
+//         return `${name} is here`
+//     }
+// }
+// console.log(obj['name']('dinesh')); 
+// console.log(obj.age);
+// console.log(Math.trunc(Math.random()*6)+1);
+// console.log(arr.concat(['name',1,{name:'dinesh'}]));
 //////////////DOM Manipulation//////////////
 // document.querySelector('body').style.backgroundColor='red'
-let heading=document.querySelector('.my-name');
-heading.style.backgroundColor='yellow'
-let newBtn=document.createElement('button');
-newBtn.textContent='CLICK ME';
-document.body.appendChild(newBtn);
-newBtn.addEventListener('click',(event)=>{
-    heading.textContent='ENTER NAME';
-    document.querySelector('body').style.backgroundColor='red'
-})
+// let heading=document.querySelector('.my-name');
+// heading.style.backgroundColor='yellow'
+// let newBtn=document.createElement('button');
+// newBtn.textContent='CLICK ME';
+// document.body.appendChild(newBtn);
+// newBtn.addEventListener('click',(event)=>{
+//     heading.textContent='ENTER NAME';
+//     document.querySelector('body').style.backgroundColor='red'
+// })
 
 //------Hoisting and TDZ-----------//
 // console.log(abc);
@@ -275,3 +275,156 @@ let obj2={
 // )
 // console.log([...newObjMap]);
 // console.log(newObjMap.entries());
+
+//================STRINGS================
+// console.log('dinesh'[2]);
+// console.log('dinesh'.length);
+// console.log('dineshne'.indexOf('n'));
+// console.log('dineshne'.lastIndexOf('n'));
+// console.log('dineshne'.substring('din'));
+// let data='My name is dinesh'
+// console.log(data.slice(3,7));
+// console.log(data);
+// console.log(data.slice(0,data.indexOf(' ')));
+// console.log(data.slice(data.lastIndexOf(' ')+1));
+// console.log(data.slice(-2));
+//================STRINGS==================
+// let str1='my name is dinesh name'
+// console.log('                dinesh'.trimEnd());
+// console.log(str1.replace('name','ID').toUpperCase());
+// console.log(str1.replaceAll('name','ID').toUpperCase());
+// console.log(str1.replace(/name/g,'ID').toUpperCase());
+// console.log(str1.startsWith('name'));
+// console.log(str1.endsWith('name'));
+// console.log(str1.split('name').join('-'));
+//  str1 = str1.split(' ');
+//  let newCap=[]
+// for(let d of str1){
+//   newCap.push(d.replace(d[0],d[0].toUpperCase()))
+  
+// }
+// console.log(newCap.join(' '));
+// let cardNo='4111111111111111'.slice(-4);
+// console.log(cardNo.slice(-4));
+// cardNo.padStart(16,'x');
+// console.log(cardNo.padStart(16,'x'));
+// console.log(10-'');
+// let data='dinesh'.repeat(6);
+// console.log(data);
+//========Coding Challange===========
+// document.body.append(document.createElement('textarea'));
+// document.body.append(document.createElement('button'));
+// document.querySelector('button').textContent='Button'
+// document.querySelector('button').addEventListener('click',(event)=>{
+//   const text=document.querySelector('textarea').value;
+//   console.log(text);
+// })
+//=========Call and Apply Method=============
+// let delhi={
+//   name:'Air India',
+//   iatacode:'AT',
+//   bookings:[],
+//   book(flightNum,name){
+//     console.log(`${name} booked a seat on ${this.name} flight ${this.iatacode} ${flightNum}`);
+//     this.bookings.push({flight:`${this.iatacode} ${flightNum}`,name})
+//   }
+// }
+// delhi.book(239,'Jonas');
+// let euroWings={
+//   name:'Air India',
+//   iatacode:'AT',
+//   bookings:[],
+// }
+// let bookAirline=delhi.book;
+// bookAirline(23,'Dinesh Mehra'); Not Work
+// bookAirline.call(euroWings,23,'Dinesh Mehra');
+// bookAirline.apply(euroWings,[20,'Rahul Mehra']);
+
+// console.log(delhi);
+// console.log(euroWings);
+//==========BIND METHOD==================
+// let euroWings={
+//   name:'Air India',
+//   iatacode:'AT',
+//   bookings:[],
+// }
+// euroWings.planes=300;
+// euroWings.buyPlane=function(){
+//   console.log(this);
+//   this.planes++;
+//   console.log(this.planes);
+// }
+// euroWings.buyPlane()
+// document.querySelector('.buy').addEventListener('click',euroWings.buyPlane.bind(euroWings));
+// console.log(euroWings);
+//==============CLOSURE=============
+// const secureBooking=function(){
+//   let passangerCount=0;
+//   return function(){
+//     passangerCount++;
+//     console.log(`${passangerCount} passenger`);
+//   }
+// }
+// let booker=secureBooking()
+// booker();
+// booker()
+// booker()
+// booker()
+// booker()
+// booker()
+// console.dir(booker);
+//===========ARRAYS=======
+// let arrNew=[1,2,3,4,5,6];
+// console.log(arrNew.slice(2,4))
+// console.log(arrNew.splice(2,2))
+// console.log(arrNew);
+
+// document.querySelector('body').insertAdjacentHTML('afterbegin','<h1>Dinesh 1</>');
+// document.querySelector('body').insertAdjacentHTML('beforebegin','<h1>Dinesh 2</>')
+// document.querySelector('body').insertAdjacentHTML('afterend','<h1>Dinesh 3</>')
+// document.querySelector('body').insertAdjacentHTML('beforeend','<h1>Dinesh 4</>')
+//===============REDUCE METHOD==============
+// let arr = [175, 50, 25];
+//  function subofArray(total, num) {
+//   console.log(total,num);
+//     return total - num;
+// }
+ 
+// function myGeeks(item) {
+//     console.log(arr.reduce(subofArray));
+// }
+// myGeeks()
+
+// let username='DINESH SINGH MEHRA';
+// let user=username.toLowerCase().split(' ').map((name)=>name[0]).join('')
+// console.log(user);
+//===========REDUCT METHOD=======
+// let arr=[2,4,6,8,10];
+// let value=arr.reduce((acc,curr)=>acc+curr)
+// console.log(value);
+// console.log(arr.find((val)=>val>6));
+// console.log(arr.indexOf(4));
+// console.log(arr.findIndex((num)=>num>6))
+// console.log(arr.some((val)=>val%2==1));
+// console.log(arr.every((values)=>values%2==0))
+//==========FLAT AND FLATMAP=====
+// let arr=[[[1,2],3],[4,[5,6]],7,8]
+// console.log(arr.flat(2));
+// let arr=[{name:'a',movements:[1,2]},{name:'b',movements:[3,4]}];
+// const total=arr.flatMap((acc)=>acc.movements)
+// console.log(total);
+//===========SORT ARRAYS==========
+// let arrTest=['Z','A','M','J','C']
+// arrTest.sort()
+// console.log(arrTest);
+// let arrNum=[-130,-100,650,1300,200,3000,450,70]
+// console.log(arrNum);
+// arrNum.sort();
+// arrNum.sort((a,b)=>{
+//   if(a>b)
+//   return 1;
+// if(b>a)
+// return -1
+// })
+// console.log(arrNum);
+//==========Filling Arrays========
