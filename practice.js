@@ -428,3 +428,121 @@ let obj2={
 // })
 // console.log(arrNum);
 //==========Filling Arrays========
+// const x= new Array(7)
+// x.fill(1)
+// x.fill(1,3)
+// x.fill(1,3,5)
+// console.log(x);
+// console.log(Array.from([1,2,3,4,5,6,7]));
+///=============NUMBERS============
+// console.log(23===23.0);
+// console.log(0.1+0.2);
+// console.log(0.1+0.2==0.3);
+// console.log(Number('666'));
+// console.log(Number.parseInt('30',10));
+// console.log(Number.parseInt('e30'));
+// console.log(Number.parseInt('2.65'));
+// console.log(Number.isFinite(1/0));
+// console.log(Math.sqrt(25))
+// console.log(25**(1/2))
+// console.log(Math.max(4,3,1,4,6,2))
+// console.log(Math.PI);
+// console.log(Math.trunc(Math.random()*6)+1)
+//==============BIG INT==========
+// console.log(BigInt(99999999999999999999999999999999999999999n));
+// console.log(typeof 20n);
+// console.log(20n===20);
+// console.log(20n==20);
+//====================DATES===========
+// console.log(new Date(2024,2,30,11,19,20));
+// console.log(new Date().getTime()==Date.now());
+// console.log(new Date(1711821148532));
+// console.log(Date.now());
+
+// let days=((new Date(2024,2,20)-new Date(2024,2,30))/1000*60*60*24);
+// console.log(Math.abs(days))
+//==============INTERNATIONALIZING DATES===========
+// const date=new Intl.DateTimeFormat('en-US').format(new Date());
+// const date=new Intl.DateTimeFormat('en-GB').format(new Date());
+// const options={
+//   hour:'numeric',
+//   minute:'numeric',
+//   day:'numeric',
+//   month:"long",
+//   year:"numeric",
+//   weekday:'long'
+// }
+// const date=new Intl.DateTimeFormat('en-GB',options).format(new Date());
+
+// console.log(date);
+// const locale=navigator.language;
+// console.log(locale);
+// const num=92340239023923;
+// let convertNum=new Intl.NumberFormat('en-IN').format(num);
+// const options={
+//   style:'currency',
+//   curency:'USD',
+  // useGrouping:true
+// }
+// let convertNum=new Intl.NumberFormat('en-IN',options).format(num);
+// console.log(convertNum);
+//===============Countdown Timwe============
+// let time=100;
+// let timerLabel=document.querySelector('.timer-label');
+// const tick=function(){
+//   const minute=String(Math.trunc(time/60)).padStart(2,0);
+//   const sec=String(time%60).padStart(2,0)
+//   timerLabel.textContent=`${minute}:${sec}`;
+//   if(time==0){
+//     clearInterval(timer);
+//   }
+//   console.log(minute);
+//   time--
+// }
+// tick();
+// const timer=setInterval(tick,1000)
+//=========================DOM MANIPULATION=========
+// console.log(document.documentElement);
+// console.log(document.head);
+// console.log(document.body);
+// console.log(document.querySelector('.buy'));
+// console.log(document.querySelectorAll('.buy'));
+// console.log(document.getElementsByTagName('button'));
+// let message=document.createElement('div');
+// message.textContent='Create new div';
+// message.innerHTML='<button>Got It!</button>'
+// const bodyData=document.querySelector('.header');
+// bodyData.prepend(message)
+// bodyData.append(message)
+// bodyData.append(message.cloneNode(true))
+// bodyData.before(message)
+// bodyData.after(message)
+// document.addEventListener('click',(e)=>{
+  // message.remove();
+  //===Older Method
+//   message.parentElement.removeChild(message)
+// })
+// message.style.backgroundColor='#37383d'
+// message.style.width='120%';
+// message.style.height='43px';
+// console.log(message.style.height);
+// console.log(message.style.backgroundColor);
+// message.style.height=Number.parseFloat(getComputedStyle(message).height)+40+'px';
+
+// console.log(getComputedStyle(message).height);
+//=============Dom Atrributes==============
+// let updateImg=document.querySelector('img');
+// console.log(updateImg.alt);
+// console.log(updateImg.src);
+// console.log(updateImg.className);
+// console.log(updateImg.getAttribute('designer'));
+// updateImg.alt='hello testing'
+// console.log(updateImg.alt);
+// updateImg.setAttribute('company','adita')
+// console.log(updateImg.getAttribute('src'));
+// console.log(updateImg.dataset.versionNumber);
+//=======CLASSES==============
+// document.body.classList.add('bg-color','color-name')
+// document.body.classList='bg-123'
+
+//==============SCROLLING===============
