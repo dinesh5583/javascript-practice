@@ -546,3 +546,45 @@ let obj2={
 // document.body.classList='bg-123'
 
 //==============SCROLLING===============
+// const btnScroll=document.querySelector('.btn-scroll');
+// const section2=document.querySelector('.scroll-div');
+// document.body.addEventListener('click',function(){
+  // let scrollCords=section2.getBoundingClientRect();
+  // window.scrollTo(scrollCords.left+window.scrollX,scrollCords.top+window.scrollY);
+  // window.scrollTo({left:scrollCords.left+window.scrollX,top:scrollCords.top+window.scrollY, behavior:'smooth'});
+//   section2.scrollIntoView({behavior:'smooth'})
+// })
+
+let divBtn1=document.querySelector('.div1')
+let divBtn2=document.querySelector('.div2')
+let divBtn3=document.querySelector('.div3')
+divBtn1.addEventListener('click',(e)=>{
+  console.log('DIV 1');
+  // e.stopPropagation()
+
+},true)
+divBtn2.addEventListener('click',(e)=>{
+  console.log('DIV 2');
+  // e.stopPropagation()
+
+},true)
+divBtn3.addEventListener('click',(e)=>{
+  console.log('DIV 3');
+  // e.stopPropagation()
+},true)
+
+// divBtn1.addEventListener('click',(e)=>{
+//   console.log('CLcik1');
+
+// })
+// divBtn1.addEventListener('click',(e)=>{
+//   console.log('click2');
+//   e.stopImmediatePropagation()
+
+// })
+// divBtn1.addEventListener('click',(e)=>{
+//   console.log('click3');
+//   e.stopImmediatePropagation()
+
+
+// })
