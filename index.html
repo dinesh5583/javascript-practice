@@ -5,10 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- <script defer src="./script.js"></script> -->
-    <script defer src="./practice.js"></script>
     <style>
+        html,body{
+            margin: 0px;
+            padding: 0px;
+        }
         .bg-color{
             background-color: blue !important;
+        }
+        .header{
+            padding: 10px 16px;
+            background: #555;
+            color: #f1f1f1;
+        }
+        .sticky{
+            position: fixed;
+            top: 0px;
+            width: 100%;
+        }
+        .div1{
+            background-color: antiquewhite;
+            height: 500px;
+        }
+        .div2{
+            background-color:aqua;
+            height: 500px;
+        }
+        .div3{
+            background-color:aquamarine;
+            height: 500px;
         }
     </style>
 
@@ -38,7 +63,7 @@
         <h3>DIV 2</h3>
     </div> -->
     <!-- =============Event Bubbling and Capturing=============== -->
-    <div class="div1" style="padding: 40px; background-color: aqua;">
+    <!-- <div class="div1" style="padding: 40px; background-color: aqua;">
         Div1
         <div class="div2" style="padding: 40px; background-color: aquamarine;">
             div2
@@ -46,6 +71,25 @@
                 div3
             </div>
         </div>
+    </div> -->
+    <!-- ================Intersection Observer ===========-->
+    <!-- <header class="header">
+        <h1>Dinesh</h1>
+    </header>
+    <div class="div1">
+        <h1>Div1</h1>
     </div>
+    <div class="div2">
+        <h1>Div2</h1>
+    </div>
+    <div class="div3">
+        <h1>Div3</h1>
+    </div> -->
+    <!-- ================Lazy Loading Images============= -->
+    <!-- <img src="https://media.istockphoto.com/id/1463532939/photo/locks-protected-network-concept.jpg?s=1024x1024&w=is&k=20&c=--cFWjJWglqc55svSVheNEAyv2Nxynxb-AtkcW773QY=" alt="" data-src="https://media.istockphoto.com/id/1471444483/photo/customer-satisfaction-survey-concept-users-rate-service-experiences-on-online-application.jpg?s=1024x1024&w=is&k=20&c=uxmwbqYR0_zJuafhIm6lExqft1C3cMXu2zHHh7v-Jq8="> -->
+    <div>
+        <span><b>Tree</b></span>
+    </div>
+    <script async src="./practice.js"></script>
 </body>
 </html>

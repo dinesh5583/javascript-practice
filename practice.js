@@ -555,23 +555,23 @@ let obj2={
 //   section2.scrollIntoView({behavior:'smooth'})
 // })
 
-let divBtn1=document.querySelector('.div1')
-let divBtn2=document.querySelector('.div2')
-let divBtn3=document.querySelector('.div3')
-divBtn1.addEventListener('click',(e)=>{
-  console.log('DIV 1');
+// let divBtn1=document.querySelector('.div1')
+// let divBtn2=document.querySelector('.div2')
+// let divBtn3=document.querySelector('.div3')
+// divBtn1.addEventListener('click',(e)=>{
+//   console.log('DIV 1');
   // e.stopPropagation()
 
-},true)
-divBtn2.addEventListener('click',(e)=>{
-  console.log('DIV 2');
+// },true)
+// divBtn2.addEventListener('click',(e)=>{
+//   console.log('DIV 2');
   // e.stopPropagation()
 
-},true)
-divBtn3.addEventListener('click',(e)=>{
-  console.log('DIV 3');
+// },true)
+// divBtn3.addEventListener('click',(e)=>{
+//   console.log('DIV 3');
   // e.stopPropagation()
-},true)
+// },true)
 
 // divBtn1.addEventListener('click',(e)=>{
 //   console.log('CLcik1');
@@ -588,3 +588,197 @@ divBtn3.addEventListener('click',(e)=>{
 
 
 // })
+//===============Intersection Observer==========
+// const header=document.querySelector('.header');
+// const Observer=new IntersectionObserver(function(entries){
+//   const [entry]=entries;
+//   if(!entry.isIntersecting){
+//     header.classList.add('sticky')
+//   }else{
+//     header.classList.remove('sticky')
+//   }
+// },{threshold:0,rootMargin:'0px',root:null})
+// Observer.observe(header)
+//===========LAZY LOADING IMAGES=======
+// let imageTarget=document.querySelectorAll('img[data-src]');
+// console.log(imageTarget);
+//============DOM Event LifeCycle==============
+// document.addEventListener('DOMContentLoaded',function(e){
+//   alert('1')
+//   console.log('HTML parsed and DOM tree built',e)
+// })
+// window.addEventListener('load',(e)=>{
+//   console.log('page fully loaded');
+// })
+// window.addEventListener('beforeunload',function(e){
+//   console.log('User exit');
+//   e.preventDefault();
+//   e.returnValue=''
+// })
+//====================OOPS: Objects===========
+// const Person=function(name,dob){
+//   this.name=name;
+//   this.dob=dob;
+// }
+// Person.prototype.calcAge=function(){
+//   console.log(2024-this.dob);
+// }
+// Person.prototype.college='Delhi University'
+// let dinesh=new Person('Dinesh','1997');
+// console.log(dinesh.college);
+// dinesh.calcAge()
+// console.log(Person.prototype.isPrototypeOf(dinesh));
+// let govind=new Person('Govind','1995');
+// console.log(govind.college);
+// console.log(Person.prototype);
+// console.log('1=========',dinesh.__proto__,'2=====',dinesh.__proto__.__proto__);
+// console.log(Object.prototype);
+
+//================ES6 Classes===============
+// class PersonCl{
+//   constructor(firstname,birthYear){
+//     this.firstname=firstname;
+//     this.birthYear=birthYear;
+//   }
+//   calcAge(){
+//     console.log(2024-this.birthYear);
+//   }
+// }
+// const dinesh=new PersonCl('dinesh',1997)
+// console.log(dinesh);
+// dinesh.calcAge()
+// console.log(dinesh.__proto__);
+// console.log(PersonCl.prototype==dinesh.__proto__);
+//=================Setter and Getter===========
+// const account={
+//   movements:[20,30,40],
+//   get latest(){
+//     return this.movements.slice(-1).pop()
+//   },
+//   set latest(val){
+//     this.movements.push(val)
+//   }
+// }
+// console.log(account.latest);
+// account.latest=50;
+// console.log(account.movements);
+// class PersonCl{
+//   constructor(firstname,birthYear){
+//     this.firstname=firstname;
+//     this.birthYear=birthYear;
+//   }
+//   static getName(obj){
+//     console.log('Hello There'+" "+obj.firstname);
+//   }
+  // get age(){
+  //   return 2024-this.birthYear;
+  // }
+  // set fname(val){
+  //   this.firstname=val;
+  // }
+// }
+// let dinesh=new PersonCl('Dinesh',1997)
+// console.log(dinesh.firstname);
+// dinesh.fname='Mehra'
+// console.log(dinesh.firstname);
+// console.log(dinesh.age);
+// PersonCl.getName();
+// dinesh.getName()
+// PersonCl.getName(dinesh);
+//===============Object.Create()===============
+// const Personproto={
+//   calcAge(){
+//     console.log(2024-this.birthYear);
+//   }
+// }
+// let dinesh=Object.create(Personproto)
+// console.log(dinesh);
+// dinesh.firstname='Dinesh Mehra',
+// dinesh.birthYear=1997;
+// console.log(dinesh);
+// dinesh.calcAge()
+// console.log(dinesh.__proto__==Personproto);
+
+
+// ====================Inhreitence Between Classes===================
+// 1. Constructor Function
+// const Student=function(firstname, birth, course){
+//   Person.call(this,firstname,birth)
+//   this.course=course;
+// }
+// const Person=function(firstname,birth){
+//   this.firstname=firstname;
+//   this.birth=birth;
+//   this.calAge=function(){
+//     console.log(2024-this.birth);
+//   }
+// }
+
+// const dinesh=new Student('dinesh',1997,'MCA')
+// const rahul=new Person('rahul',1960,'Eng')
+// dinesh.calAge();
+// rahul.calAge()
+// Student.prototype=Object.create(Person.prototype);
+// const dinesh=new Student('dinesh',1997,'MCA')
+// console.log(dinesh);
+// 2. ES6 Classes
+// class PersonCl{
+//   constructor(firstname,birthyear){
+//     this.firstname=firstname;
+//     this.birthyear=birthyear
+//   }
+//   calcAge(){
+//     console.log(2024-this.birthyear);
+//   }
+// }
+// class StudentCl extends PersonCl{
+//   constructor(firstname,birthyear,course){
+//     super(firstname,birthyear)
+//     this.course=course;
+//   }
+//   introduce(){
+//     console.log(`My name is ${this.firstname} & i study ${this.course}`);
+//   }
+// }
+// const dinesh=new StudentCl('DInesh Mehra',1997,'MCA');
+// console.log(dinesh);
+// dinesh.calcAge();
+// dinesh.introduce()
+
+//=================Public, private and protected fields===========
+// class Account{
+//   locale=navigator.language;
+//   #movement=[];
+//   #pin;
+//   constructor(owner,currency,pin){
+//     this.owner=owner;
+//     this.currency=currency
+//     this.#pin=pin;
+//     console.log(`Thanks for opening a account, ${this.owner}`);
+//   }
+//   getMovements(){
+//     return this.#movement;
+//   };
+//   deposit(val){
+//     this.#movement.push(val);
+//     return this;
+//   }
+//   withdraw(val){
+//     this.deposit(-val);
+//   }
+//   requestLoan(val){
+//     if(this._approvedLoan(val)){
+//       this.deposit(val);
+//       console.log('Loan Approved'); 
+//     }
+//   }
+//   _approvedLoan(val){
+//     return true;
+//   }
+// }
+// const acc1=new Account('Dinesh','INR',1111);
+// console.log(acc1);
+// acc1.deposit(250).deposit(500).withdraw(35).withdraw(4000)
+// acc1.withdraw(140);
+// acc1.requestLoan(10000)
+// console.log(acc1);
